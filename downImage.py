@@ -27,7 +27,8 @@ def downImage():
 				_url = base_url + str(i) + '.htm'
 				soup = BeautifulSoup(urllib2.urlopen(_url),'lxml')
 				content = soup.find(text=re.compile(r'document.write'))
-				content = re.findall(r"\+\"(.+?)\'>", content)
+				content = re.findall("\+\"(.+?)'>", content)
+				#content = re.findall(r"\+\"(.+?)'>", content)
 				if len(content) > 0:
 					image_url = base_image_url + content[0]
 					arr = content[0].split('.')
