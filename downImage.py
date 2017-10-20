@@ -16,7 +16,7 @@ def downImage():
 			base_url = line[0]
 			dir_path = image_dir+line[1]
 			page_num = int(line[2])+1
-
+			
 			#判断文件路径是否存在，不存在则创建文件目录
 			if os.path.exists(dir_path):
 				pass
@@ -33,7 +33,6 @@ def downImage():
 					image_url = base_image_url + content[0]
 					arr = content[0].split('.')
 					image_path = dir_path + '/' + str(i) + '.' + arr[len(arr)-1]
-				
 					r = requests.get(image_url)
 					with open(image_path, "wb") as code:
 						code.write(r.content)
