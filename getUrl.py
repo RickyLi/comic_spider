@@ -25,4 +25,5 @@ def getUrls():
     print("Total write " + str(i) + " items into file.")
 
 
-getUrls()
+if __name__ == "__main__":
+    getUrls()
