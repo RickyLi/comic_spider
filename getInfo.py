@@ -27,4 +27,5 @@ def getInfo():
 	fw.close()
 	#fo.close()
 
-getInfo()
+if __name__ == "__main__":
+	getInfo()
