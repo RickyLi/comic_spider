@@ -39,4 +39,5 @@ def downImage():
 					
 					print(image_path)
 
-downImage()
+if __name__ == "__main__":
+	downImage()
